@@ -1,11 +1,11 @@
 # convert KMPH to and from MPH
 def kmph_to_mph(kmph):
-    mph = (kmph * 0.621371)
-    return(mph)
+    mph = round((kmph * 0.621371), 0)
+    return(int(mph))
     
 def mph_to_kmph(mph):
-    kmph = (mph * 1.60934)
-    return(kmph)
+    kmph = round((mph * 1.60934), 0)
+    return(int(kmph))
     
 kmph_or_mph = (input("Do you want to convert to kmph or mph?"))    
 if kmph_or_mph == "mph":
@@ -16,13 +16,3 @@ elif kmph_or_mph == "kmph":
     print(str(mph) + " miles per hour is equal to " + str(mph_to_kmph(mph)) + " kilometers per hour.")
 else:
     exit
-
-# convert KMPH to American the long way
-def long_kmph_to_mph(kmph):
-    kilometers = (kmph * 60)
-    miles = (kilometers * .621371)
-    mph = (miles / 60)
-    return(mph)
-
-kmph = float(input("What is the kilometers per hour? "))
-print (long_kmph_to_mph(kmph))
