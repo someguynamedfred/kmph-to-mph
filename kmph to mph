@@ -1,18 +1,18 @@
 # convert KMPH to and from MPH
 def kmph_to_mph(kmph):
-    mph = round((kmph * 0.621371), 0)
+    mph = round((float(kmph) * 0.621371), 0)
     return(int(mph))
     
 def mph_to_kmph(mph):
-    kmph = round((mph * 1.60934), 0)
+    kmph = round((float(mph) * 1.60934), 0)
     return(int(kmph))
     
 kmph_or_mph = (input("Do you want to convert to kmph or mph?"))    
 if kmph_or_mph == "mph":
-    kmph = float(input("What is the kilometers per hour? "))
-    print(str(kmph) + " kilometers per hour is equal to " + str(kmph_to_mph(kmph)) + " mph.")
+    kmph = input("What is the kilometers per hour? ")
+    print(str(kmph) + " kmph is equal to " + str(kmph_to_mph(kmph)) + " mph.")
 elif kmph_or_mph == "kmph":
-    mph = float(input("What is the miles per hour?"))
-    print(str(mph) + " miles per hour is equal to " + str(mph_to_kmph(mph)) + " kilometers per hour.")
+    mph = input("What is the miles per hour?")
+    print(str(mph) + " mph is equal to " + str(mph_to_kmph(mph)) + " kilometers per hour.")
 else:
     exit
