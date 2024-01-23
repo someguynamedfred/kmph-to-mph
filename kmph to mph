@@ -8,9 +8,9 @@ print(kmph_to_mph(kmph))
 
 # convert KMPH to American the long way
 def long_kmph_to_mph(kmph):
-    kilometers = (kmph / 60)
+    kilometers = (kmph * 60)
     miles = (kilometers * .621371)
-    mph = (miles * 60)
+    mph = (miles / 60)
     return(mph)
 
 kmph = float(input("What is the kilometers per hour? "))
