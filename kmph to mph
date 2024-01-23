@@ -3,8 +3,19 @@ def kmph_to_mph(kmph):
     mph = (kmph * 0.621371)
     return(mph)
     
-kmph = float(input("What is the kilometers per hour? "))
-print(kmph_to_mph(kmph))
+def mph_to_kmph(mph):
+    kmph = (mph * 1.60934)
+    return(kmph)
+    
+kmph_or_mph = (input("Do you want to convert to kmph or mph?"))    
+if kmph_or_mph == "mph":
+    kmph = float(input("What is the kilometers per hour? "))
+    print(kmph + " is equal to " (kmph_to_mph(kmph)) + " mph.")
+elif kmph_or_mph == "kmph":
+    mph = float(input("What is the miles per hour?"))
+    print(mph + " is equal to " + (mph_to_kmph(mph) + " kilometers per hour."))
+else:
+    exit
 
 # convert KMPH to American the long way
 def long_kmph_to_mph(kmph):
